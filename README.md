@@ -1,1 +1,1 @@
-Put your code inside /src folder
+Just insert all files & folder inside your laravel project
