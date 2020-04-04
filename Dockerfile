@@ -115,8 +115,10 @@ RUN pecl install apcu \
 RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY src/ /var/www/html/
+COPY . /var/www/html/
 
 RUN cd /var/www/html && composer install
 
-EXPOSE 80
+CMD php artisan serve --host=0.0.0.0 --port=8181
+
+EXPOSE 8181
