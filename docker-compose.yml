@@ -1,0 +1,10 @@
+version: '3'
+services:
+  website:
+    container_name: php73
+    build:
+      context: ./
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - 8000:80
